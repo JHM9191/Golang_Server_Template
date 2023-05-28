@@ -4,6 +4,7 @@ import (
 	"Server/api/v1/router"
 	_ "Server/cmd/docs"
 	"Server/internal/util/db"
+	"fmt"
 )
 
 // @title Swagger Example API
@@ -24,5 +25,6 @@ func main() {
 	router.Server()
 
 	ch := make(chan bool)
+	fmt.Println("This is test")
 	<-ch
 }
